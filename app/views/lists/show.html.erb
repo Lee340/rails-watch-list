@@ -1,1 +1,8 @@
-<h2><%= @list.name %></h2>
+
+<h1><%= @list.name %></h1>
+
+<% if @list.photo %>
+  <% if @list.photo.key %>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+<% end %>
